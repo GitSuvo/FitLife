@@ -21,18 +21,18 @@ while True:
         user_weight = float(input('Какой у Вас вес?(кг) '))
         break
     except ValueError:
-        print('Пожалуйста, введите корректное число, например, 60.5 (используя точку) или 60.')
+        print('Пожалуйста, введите корректное число, например, 60.5 или 60.')
 
 while True:
     try:
         user_height = float(input('Какой у Вас рост?(м, например 1.75) '))
         break
     except ValueError:
-        print('Пожалуйста, введите корректное число, например, 1.75 (используя точку).')
-    
-        
+        print('Пожалуйста, введите корректное число, '
+              'например, 1.75 (используя точку).')
 
-# 3. Расчеты ИМТ и (воды в литрах).
+
+# 3. Расчеты ИМТ и (воды в литрах)
 
 bmi = round((user_weight / (user_height ** 2)), 1)
 water_needed = round(((user_weight * STND_ML_PER_KG) / CONV_ML_TO_LT), 1)
